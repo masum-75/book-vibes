@@ -4,12 +4,12 @@ import { Outlet } from 'react-router';
 
 const RootLayout = () => {
     return (
-        <div>
-            <Navbar></Navbar>
-            <main>
-                <Outlet></Outlet>
-            </main>
-        </div>
+      <div className="max-w-6xl mx-auto mt-10 bg-white rounded-2xl shadow-sm">
+        <Navbar></Navbar>
+        <main>
+          <Outlet></Outlet>
+        </main>
+      </div>
     );
 };
 

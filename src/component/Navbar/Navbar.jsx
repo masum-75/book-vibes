@@ -1,9 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   return (
-    <div className="text-white navbar bg-base-100 shadow-sm">
+    <div className="bg-white text-black navbar shadow-sm">
       {/* left */}
       <div className="navbar-start">
         <div className="dropdown">
@@ -40,7 +40,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <a className="btn btn-ghost text-xl">Book Vibe</a>
+        <Link to='/' className="font-bold text-xl">Book Vibe</Link>
       </div>
 
       {/* center */}
