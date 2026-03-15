@@ -40,7 +40,9 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <Link to='/' className="font-bold text-xl">Book Vibe</Link>
+        <Link to="/" className="font-bold text-xl">
+          Book Vibe
+        </Link>
       </div>
 
       {/* center */}
@@ -59,9 +61,9 @@ const Navbar = () => {
       </div>
 
       {/* right */}
-      <div className="navbar-end gap-2">
+      <div className="navbar-end rounded gap-2 ">
         <button className="btn bg-[#23BE0A] text-white ">Sign In</button>
-        <button className="btn bg-[#23BE0A] text-white">Sign Up</button>
+        <button className="btn bg-[#59C6D2] text-white">Sign Up</button>
       </div>
     </div>
   );

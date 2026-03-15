@@ -6,22 +6,29 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import RootLayout from './component/RootLayout/RootLayout.jsx'
 import Home from './component/Home/Home.jsx'
 import Books from './component/Books/Books.jsx'
+import BookDetails from './component/BookDetails/BookDetails.jsx'
+import NotFound from './component/NotFound.jsx'
 
 const router = createBrowserRouter([
   {
-    path:'/',
+    path: "/",
     Component: RootLayout,
-    children:[
+    errorElement: <NotFound />,
+    children: [
       {
-        index: true, 
-         loader:async()=>fetch('/data/booksData.json'),
+        index: true,
+        loader: async () => fetch("/data/booksData.json"),
         Component: Home,
       },
-     
-      
-    ]
-  }
-])
+      {
+        path: "/book-details/:id",
+
+        loader: () => fetch("/data/booksData.json"),
+        Component: BookDetails,
+      },
+    ],
+  },
+]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
