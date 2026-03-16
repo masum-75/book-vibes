@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router";
+import NotFound from "../NotFound";
 
 const BookDetails = () => { 
   const { id } = useParams(); 
@@ -9,7 +10,7 @@ const BookDetails = () => {
   
   const book = bookDetail.find((b) => b.bookId === bookId);
 
-  if (!book) return <div>Loading or Book Not Found...</div>;
+  if (!book) return <NotFound></NotFound>;
 
   const {
     bookName,
@@ -78,7 +79,7 @@ const BookDetails = () => {
         </div>
 
         <div className="flex gap-4">
-          <button className="px-8 py-3 border border-gray-300 rounded-lg font-bold text-[#131313] hover:bg-gray-100 transition-colors">
+          <button className="px-8 py-3 border border-[#23BE0A] rounded-lg font-bold text-[#131313] hover:bg-[#23BE0A] hover:text-white transition-colors">
             Read
           </button>
           <button className="px-8 py-3 bg-[#50B1C9] text-white rounded-lg font-bold hover:bg-[#3fa2ba] transition-colors">
