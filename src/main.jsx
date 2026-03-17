@@ -8,6 +8,7 @@ import Home from './component/Home/Home.jsx'
 import Books from './component/Books/Books.jsx'
 import BookDetails from './component/BookDetails/BookDetails.jsx'
 import NotFound from './component/NotFound.jsx'
+import ListedBooks from './component/ListedBooks/ListedBooks.jsx'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
 
         loader: () => fetch("/data/booksData.json"),
         Component: BookDetails,
+      },
+      {
+        path: "/listed-books",
+        loader: () => fetch("/data/booksData.json"),
+        Component: ListedBooks,
       },
     ],
   },
